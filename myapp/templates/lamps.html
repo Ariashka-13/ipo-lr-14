@@ -1,0 +1,54 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Магазин необычных светильников для дома</title>
+</head>
+<body>
+    <div class="container">
+        <p><img src ="{% static 'img/f_logo.55a0565c.png' %}" alt = "Description of the IMG" class = "custom-img">
+            <div class="text">
+                <p>(029) 500 00 90, (044) 517 00 00</p>
+                <p>пн-пт 9:00-17:30, сб-вс выходной, через сайт заявки принимаются круглосуточно</p>
+            </div>
+    </div>
+    <h1>Магазин люстр и декора Фламинго</h1>
+    <p>"Фламинго" - сайт с каталогами светильников и оригинальных предметов интерьера. Более 9 000 моделей светильников в наличии, более 20 европейских фабрик, с которыми мы работаем под заказ.</p>
+    <h3>Подробнее на сайте</h3>
+    <a href = "https://flamingo.by/"><p>flamingo.by</p></a>
+    <style>
+    body {
+        background-color:azure;
+    }
+    h1 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        color: #c31560;
+    }
+    h3 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        color: #e93885 ;
+    }
+    p{
+        text-align:center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    a{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .container {
+            display: flex;
+            align-items: center;
+    }
+    .custom-img {
+            margin-right:15px;
+    }
+    .text {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+    }
+    </style>
+</body>
+</html>
