@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Детали квалификации</title>
+</head>
+<body>
+    <h1>{{ spec.fields.title }}</h1>
+    <p><strong>ID:</strong> {{ spec.pk }}</p>
+    <p><strong>Описание:</strong> {{ spec.fields.description }}</p>
+    <a href="{% url 'home' %}">На главную</a> | 
+    <a href="{% url 'spec_list' %}">К списку</a>
+</body>
+</html>

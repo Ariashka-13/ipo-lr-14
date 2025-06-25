@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Список квалификаций</title>
+</head>
+<body>
+    <h1>Список квалификаций</h1>
+    <ul>
+        {% for item in specialties %}
+            <li><a href="{% url 'spec_detail' item.pk %}">{{ item.fields.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">На главную</a>
+</body>
+</html>

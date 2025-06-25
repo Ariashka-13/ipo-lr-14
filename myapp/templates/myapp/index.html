@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главное меню</title>
+</head>
+
+<body>
+    <h1>Главное меню</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'spec_list' %}">Список всех квалификаций</a></li>
+            <li>
+                <form id="searchForm" method="get">
+                    <label for="id">Поиск по ID:</label>
+                    <input type="number" id="id" name="id" min="1" required>
+                    <button type="submit">Найти</button>
+                </form>
+                <div id="errorMessage" class="error"></div>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const id = document.getElementById('id').value;
+            const errorElement = document.getElementById('errorMessage');
+            
+            errorElement.textContent = '';
+           
+            if (!id) {
+                errorElement.textContent = 'Пожалуйста, введите ID';
+                return;
+            }
+
+            window.location.href = `/spec/${id}/`;
+        });
+    </script>
+</body>
+</html>
